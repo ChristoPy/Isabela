@@ -1,0 +1,174 @@
+/*					Isabela - 0.1
+
+
+	Copyright 2017 Christopher Ribeiro
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	 http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+*/
+
+
+/* html reformulations */
+
+html {
+	height: 100%;
+	overflow: auto;
+}
+
+body {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+h1 {
+	padding: 0px;
+	margin: 20px 0px 0px 0px;
+	text-align: center;
+	font-weight: normal;
+}
+
+
+/* Header */
+
+.Header {
+	/*width: 100%;*/
+	/*height: 30px;*/
+	/*border-bottom: 1px solid #CCC;*/
+	/*text-align: center;*/
+	/*padding: 15px 0px 5px;*/
+	position: relative;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+/* Main area */
+
+.Main {
+	width: 100%;
+	height: 100%;
+}
+
+/* Messages area */
+
+.MessagesArea {
+	height: calc(100% - 102px);
+	width: 100%;
+	background-color:#FFF;
+	overflow-y: scroll;
+}
+
+
+/* Messages */
+
+.ReceivedMessage {
+	margin: 10px 10px;
+	background-color: #f1f0f0;
+	max-width: calc(45% - 20px);
+	color: #000;
+	padding: 10px;
+	font-size: 1em;
+	border-radius: 15px;
+	clear: both;
+	float: left;
+	word-wrap: break-word;
+}
+
+
+.SentMessage {
+	background-color: #0084ff;
+	color: #FFF;
+	margin: 10px 10px 10px 55%;
+	clear: both;
+	float: right;
+	position: relative;
+}
+
+
+/* Message information */
+
+.SentMessageInformation {
+	color: #8C8C8C;
+	float: right;
+	margin-right: 20px;
+	font-size: 12px;
+}
+
+.ReceivedMessageInformation {
+	color: #8C8C8C;
+	font-size: 12px;
+	margin: 4px 0px 0px 20px;
+}
+
+/* Entry field */
+
+.MessageEntry {
+	padding: 5px;
+	margin: 10px;
+	font-size: 14px;
+	width: calc(100% - 30px);
+	border-radius: 5px;
+	border: 1px solid #CCC;
+	font-family: Arial;
+	font-weight: normal;
+}
+
+.Bottom {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	bottom: 0px;
+	border-top: 1px solid #CCC;
+}
+
+/* Button */
+.Button {
+	width: 150px;
+	margin: 0px auto;
+}
+
+.GrayBox {
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	background: rgba(5, 5, 5, 0.75);
+	position: absolute;
+	z-index: 9999999999999;
+	color: #fff;
+}
+
+.LanguageSelectionArea {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+}
+
+.Button {
+	background-color: #43ACEC;
+	color: #FFF;
+	font-size: 16px;
+	border-radius: 8px;
+	text-align: center;
+	margin: 15px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.Button:hover {
+	background-color: #3192CE;
+}

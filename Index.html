@@ -1,0 +1,90 @@
+<!-- 
+					Isabela - 0.1
+
+
+	Copyright 2017 Christopher Ribeiro
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	 http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" type="text/css" href="Styles/Lib/Alien.css/Alien.css">
+
+		<link rel="stylesheet" type="text/css" href="Styles/Style.css">
+
+		<script type="text/javascript" src="Scripts/Patterns.js"></script>
+		<script type="text/javascript" src="Scripts/Answers.js"></script>
+
+		<script type="text/javascript" src="Scripts/Isabela.js"></script>
+
+		<script type="text/javascript" src="Scripts/ChatScreen.js"></script>
+	</head>
+	<body>
+		<div class="Main">
+			<div class="Header BottomSmallShadow">
+				<div class="HeaderTitle BlackText Center">
+					Isabela
+				</div>
+			</div>
+
+			<div class="GrayBox" id="GrayBox">
+				<div class="LanguageSelectionArea">
+					<div class="Button" id="PortugueseButton">Português</div>
+					<div class="Button" id="EnglishButton">English</div>
+				</div>
+			</div>
+
+			<div class="MessagesArea" id="MessagesArea"></div>
+
+			<div class="Bottom">
+				<input type="text" name="MessageEntry" class="MessageEntry" id="MessageEntry" placeholder="Type your message...">
+			</div>
+
+
+			<script type="text/javascript">
+				var PortugueseButton = document.getElementById("PortugueseButton");
+				var EnglishButton = document.getElementById("EnglishButton");
+
+				PortugueseButton.addEventListener ("mousedown", function (Event) {
+					Isabela.Language = "Portuguese";
+
+					var GrayBox = document.getElementById ("GrayBox");
+					GrayBox.parentNode.removeChild (GrayBox);
+
+					ChatScreen.Input.setAttribute("placeholder", "Digite sua mensagem...");
+
+				});
+
+				EnglishButton.addEventListener ("mousedown", function (Event) {
+					Isabela.Language = "English";
+
+					var GrayBox = document.getElementById ("GrayBox");
+					GrayBox.parentNode.removeChild (GrayBox);
+
+					ChatScreen.Input.setAttribute("placeholder", "Type your message...");
+
+				});
+
+
+				ChatScreen.Start ();
+			</script>
+		</div>
+	</body>
+</html>
